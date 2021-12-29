@@ -1,0 +1,44 @@
+<mat-card class="container mat-elevation-z4">
+  <!-- If data is loading, show the spinner -->
+  <mat-progress-spinner mode="indeterminate" *ngIf="prepateDataService.loading">
+  </mat-progress-spinner>
+
+  <!-- If data loading is finished and has Data, remove the spinner! -->
+  <div *ngIf="!prepateDataService.loading && !prepateDataService.noData">
+    <div class="subRowContainer">
+      <h2>
+        {{prepateDataService.saveResponse.name}}
+      </h2>
+      <img *ngIf="prepateDataService.saveResponse?.weather[0]?.icon" [src]="'http://openweathermap.org/img/wn/' +
+    prepateDataService.saveResponse?.weather[0]?.icon + '@2x.png'">
+    </div>
+
+    <div class="subColumnContainer">
+      <span>
+        <strong>Longitude:</strong> {{ prepateDataService.saveResponse?.coord?.lon }}
+      </span>
+      <span>
+        <strong>Latitude:</strong> {{ prepateDataService.saveResponse?.coord?.lat }}
+      </span>
+      <span>
+        <strong>Temperature:</strong> {{ prepateDataService.saveResponse?.main?.temp }}
+      </span>
+      <span>
+        <strong>Max temperature:</strong> {{ prepateDataService.saveResponse?.main?.temp_max }}
+      </span>
+      <span>
+        <strong>Min temperature:</strong> {{ prepateDataService.saveResponse?.main?.temp_min }}
+      </span>
+      <span>
+        <strong>Feels Like:</strong> {{ prepateDataService.saveResponse?.main?.feels_like }}
+      </span>
+      <span>
+        <strong>Humidity:</strong> {{ prepateDataService.saveResponse?.main?.humidity }}
+      </span>
+    </div>
+  </div>
+  <!-- If data loading is finished and has no Data, remove the spinner and show msg! -->
+  <div *ngIf="!prepateDataService.loading && prepateDataService.noData">
+    <h2>No data has been found!</h2>
+  </div>
+</mat-card>

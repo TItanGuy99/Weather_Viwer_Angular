@@ -1,0 +1,15 @@
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  z-index: 1;
+}
+
+.header .logo {
+  height: 32px;
+}
+
+.header .title-group {
+  padding-left: 15px;
+}
