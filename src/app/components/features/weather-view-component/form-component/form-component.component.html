@@ -1,11 +1,11 @@
 <mat-card class="mat-elevation-z4">
   <h2>Enter the city and country</h2>
-  <form>
+  <form [formGroup]="formGroup">
     <mat-form-field>
-      <input matInput placeholder="Country" name="country" [(ngModel)]="formValues.country">
+      <input matInput placeholder="Country" formControlName="country">
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="City" name="city" [(ngModel)]="formValues.city">
+      <input matInput placeholder="City" formControlName="city">
     </mat-form-field>
   </form>
   <div mat-dialog-actions align="end">
@@ -13,7 +13,7 @@
     <button mat-raised-button
     (click)="searchWeather()"
     color="primary"
-    [disabled]="!(formValues.country.length > 0 && formValues.city.length > 0)">
+    [disabled]="!formGroup.valid">
       Search
     </button>
 </div>
