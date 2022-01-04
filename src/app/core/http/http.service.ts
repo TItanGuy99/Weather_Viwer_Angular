@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class HttpService {
-  constructor(private http: HttpClient) {}
+  constructor(public http: HttpClient) {}
 
   /* get method */
   get(url: string): Observable<WeatherData> {

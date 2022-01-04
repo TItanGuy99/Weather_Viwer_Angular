@@ -1,3 +1,4 @@
+import { RouterModule, Routes } from '@angular/router';
 import {
   WeatherViewComponentComponent,
   ShowDataComponentComponent,
@@ -12,11 +13,18 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
+const routes: Routes = [
+  {
+    path: '',
+    component: WeatherViewComponentComponent
+  }
+]
+
 @NgModule({
   declarations: [
     FormComponentComponent,
     ShowDataComponentComponent,
-    WeatherViewComponentComponent,
+    WeatherViewComponentComponent
   ],
   imports: [
     CommonModule,
@@ -27,6 +35,7 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    RouterModule.forChild(routes)
   ],
   exports: [WeatherViewComponentComponent],
 })

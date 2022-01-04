@@ -1,4 +1,3 @@
-import { WeatherViewModuleModule } from './components/features/weather-view-component/weather-view-module.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -12,12 +11,11 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [AppComponent, HeaderComponent, FooterComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSnackBarModule,
     HttpClientModule,
-    WeatherViewModuleModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent],
