@@ -9,48 +9,16 @@ describe('PrepareDataServiceService', () => {
   let httpService: HttpService;
 
   let response = {
-    coord: {
-      lon: -142,
-      lat: -78,
-    },
-    weather: [
-      {
-        id: 801,
-        main: 'Clouds',
-        description: 'few clouds',
-        icon: '02n',
-      },
-    ],
-    base: 'stations',
-    main: {
-      temp: 257.91,
-      feels_like: 250.91,
-      temp_min: 257.91,
-      temp_max: 257.91,
-      pressure: 966,
-      humidity: 71,
-      sea_level: 966,
-      grnd_level: 845,
-    },
-    visibility: 10000,
-    wind: {
-      speed: 4.14,
-      deg: 96,
-      gust: 4.71,
-    },
-    clouds: {
-      all: 14,
-    },
-    dt: 1635378036,
-    sys: {
-      sunrise: 0,
-      sunset: 0,
-    },
-    timezone: -32400,
-    id: 0,
-    name: '',
-    cod: 200,
-  };
+    'name': 'São Paulo',
+    'icon': '50n',
+    'feels_like': 22.77,
+    'humidity': 91,
+    'temp': 22.13,
+    'temp_max': 22.47,
+    'temp_min': 21.75,
+    'lat': -23.5475,
+    'lon': -46.6361
+  }
 
   beforeEach(() => {
     TestBed.configureTestingModule({

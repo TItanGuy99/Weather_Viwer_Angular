@@ -1,4 +1,3 @@
-import { FormValues } from './../../../../core/data/data.model';
 import { Component } from '@angular/core';
 import { PrepareDataService } from 'src/app/core/data/prepare-data.service';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
@@ -9,11 +8,6 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   styleUrls: ['./form-component.component.css'],
 })
 export class FormComponentComponent {
-  formValues: FormValues = {
-    country: '',
-    city: '',
-  };
-
   formGroup: FormGroup;
 
   constructor(

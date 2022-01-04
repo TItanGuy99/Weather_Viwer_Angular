@@ -11,18 +11,14 @@ export class PrepareDataService {
      and Sharing it thought the components */
   saveResponse: WeatherData = {
     name: '',
-    weather: [],
-    main: {
-      feels_like: 0,
-      humidity: 0,
-      temp: 0,
-      temp_max: 0,
-      temp_min: 0,
-    },
-    coord: {
-      lat: 0,
-      lon: 0,
-    },
+    icon: '',
+    feels_like: 0,
+    humidity: 0,
+    temp: 0,
+    temp_max: 0,
+    temp_min: 0,
+    lat: 0,
+    lon: 0
   };
 
   loading: boolean = true;

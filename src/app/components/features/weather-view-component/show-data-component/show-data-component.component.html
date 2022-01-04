@@ -9,31 +9,31 @@
       <h2>
         {{prepateDataService.saveResponse.name}}
       </h2>
-      <img *ngIf="prepateDataService.saveResponse?.weather[0]?.icon" [src]="'http://openweathermap.org/img/wn/' +
-    prepateDataService.saveResponse?.weather[0]?.icon + '@2x.png'">
+      <img *ngIf="prepateDataService.saveResponse?.icon" [src]="'http://openweathermap.org/img/wn/' +
+    prepateDataService.saveResponse?.icon + '@2x.png'">
     </div>
 
     <div class="subColumnContainer">
       <span>
-        <strong>Longitude:</strong> {{ prepateDataService.saveResponse?.coord?.lon }}
+        <strong>Longitude:</strong> {{ prepateDataService.saveResponse?.lon }}
       </span>
       <span>
-        <strong>Latitude:</strong> {{ prepateDataService.saveResponse?.coord?.lat }}
+        <strong>Latitude:</strong> {{ prepateDataService.saveResponse?.lat }}
       </span>
       <span>
-        <strong>Temperature:</strong> {{ prepateDataService.saveResponse?.main?.temp }}
+        <strong>Temperature:</strong> {{ prepateDataService.saveResponse?.temp }}
       </span>
       <span>
-        <strong>Max temperature:</strong> {{ prepateDataService.saveResponse?.main?.temp_max }}
+        <strong>Max temperature:</strong> {{ prepateDataService.saveResponse?.temp_max }}
       </span>
       <span>
-        <strong>Min temperature:</strong> {{ prepateDataService.saveResponse?.main?.temp_min }}
+        <strong>Min temperature:</strong> {{ prepateDataService.saveResponse?.temp_min }}
       </span>
       <span>
-        <strong>Feels Like:</strong> {{ prepateDataService.saveResponse?.main?.feels_like }}
+        <strong>Feels Like:</strong> {{ prepateDataService.saveResponse?.feels_like }}
       </span>
       <span>
-        <strong>Humidity:</strong> {{ prepateDataService.saveResponse?.main?.humidity }}
+        <strong>Humidity:</strong> {{ prepateDataService.saveResponse?.humidity }}
       </span>
     </div>
   </div>
